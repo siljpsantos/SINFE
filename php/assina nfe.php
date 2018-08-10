@@ -53,8 +53,9 @@ if(@$xml[0]['transmitido_xml'] != 1){
             echo "<script>alert('Nota Assinada com sucesso!');</script>";
             
         }catch (\Exception $e) {
-            //aqui você trata possiveis exceptions
-            file_put_contents('../log/log'.rand(111111111, 999999999).'.txt', $e->getMessage());
+            //escreve no log
+            error_log_s($e->getMessage());
+            
             echo "<center><img src=./imgs/erro_b.png style=\"width: 30px\" /><h4 style=\"display: inline-block\"><font color=red>"
             . "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ocorreu um erro - Por favor contacte o Administraor do sistema!"
             . "</font></h4></center>";

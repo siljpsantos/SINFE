@@ -1,5 +1,17 @@
 <?php
-
+    
+    //registra log de erro
+    function error_log_s($msg){
+        
+        $file  = fopen('../log/error.txt', 'a');
+        $data  = "\n\n ------------------------" . date('d/m/Y H:i:s') . "------------------------ \n\n";
+        $data .= $msg;
+        
+        fwrite($file, $data);
+        fclose($file);
+        
+    }
+    
     //limpa string numerica
     function limpa($string){
         return $resp = preg_replace('/[^0-9]/', '', $string);
