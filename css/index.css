@@ -1,0 +1,47 @@
+.ordens{
+	margin: 10px;
+	width: auto;
+	text-align: left;
+	display: inline-block;
+}
+
+
+.ordens .titulo{
+	margin-bottom: 10px;
+	border-bottom: 1px solid #0000CD;
+	width: 620px;
+}
+
+.lista{
+	width: 620px;
+}
+
+/*--------------------------*/
+
+.lista{
+	border-spacing: 0;
+	border-collapse: separate;
+	font-size: 10pt;
+	/*background: #fff;*/
+}
+
+.lista .lista_content td{
+	background: #fff;
+	color: #4169E1;
+}
+
+.lista .lista_content:hover td {
+    background: #E0EEEE !important;
+    color: #0000CD;
+}
+
+.lista .lista_content td{
+	padding: 5px;
+}
+
+.lista .lista_titulo td{
+	padding: 5px;
+}
+
+
+

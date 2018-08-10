@@ -1,0 +1,22 @@
+cancelar nota só até 24h
+
+devolução - nota de entrada com justificativa
+
+numeração nao pode pular
+
+qtd_comercial = quanto esta sendo movimentado do produto
+
+o CFOP vai variar de acordo com a VENDA
+
+--------------
+
+icms 101 - recebe a base de calculo = valor de venda do produto
+
+aliqota = 0,75%
+
+icms aproveitado = base * aliquota
+
+-------------------
+
+IPI só percentual*
+

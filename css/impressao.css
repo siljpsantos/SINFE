@@ -1,0 +1,39 @@
+/* ESCONDE ELEMENTOS DA IMPRESSAO */
+@media print{
+	*{
+		font-size: 17pt;
+	}
+	#esconder{
+		visibility: hidden;
+	}
+	header{
+		visibility: hidden;
+	}
+	#titulo{
+		visibility: hidden;
+	}
+	input[type=submit]{
+		display: none;
+	}
+	input[type=text]{
+		font-size: 10pt;
+	}
+	select{
+		font-size: 10pt;
+	}
+	button{
+		display: none;
+	}
+	#itens{
+		display: none;
+	}
+	#venda_1{
+		display: none;
+	}
+	#venda{
+		display: none;
+	}
+	#lista_item{
+		border: 0;
+	}
+}

@@ -1,0 +1,130 @@
+BAIXE, INSTALE E ABRA O PAINEL DE CONTROLE DO XAMPP.
+NO LAO DIREITO CLIQUEM EM CONFIG E MARQUE OS SERVIÇOS
+
+MYSQL
+E
+APACHE
+
+PARA INICIAREM COM O XAMPP.
+
+NO PAINEL DO XAMPP, CLIQUEM EM APACHE E MYSQL PARA INICIAR OS SERVIÇOS.
+
+DEPOIS DISSO, FAÇA O XAMPP INICIAR AUTOMATICAMENTE COM O WINDOWS.
+
+-----------------------------------------------------------------
+
+MOVA A PASTA DO PROGRAMA PARA: C:\XAMPP\HTDOCS\
+
+-----------------------------------------------------------------
+
+COM OS SERVIÇOS STARTADOS, ABRA NO NAVEGADOR A URL: localhost/phpmyadmin,
+E CRIE 2 BANCOS DE DADOS. UM CHAMADO 
+
+db_erp_nfce 
+
+E O OUTRO CHAMADO
+
+db_ibge
+
+.
+
+NO PRIMEIRO BANCO DB_ERP OU DB_ERP_NFCE, IMPORTE O ARQUIVO DA PASTA DATABASE,
+DENTRO DA PASTA DO SISTEMA.
+
+NO SEGUNDO BANCO DB_IBGE, IMPORTE O ARQUIVO DA PASTA CIDADE-ESTADO, DENTRO DA PASTA
+DATABASE, DENTRA DA PASTA DO SISTEMA.
+
+-----------------------------------------------------------------
+
+ACESSE O SISTEMA VIA> localhost/erp-aposo*/
+
+*aposto e um nome variavel dependendo do nome da pasta e do cliente.
+
+ATUALIZE AS INFORMAÇÕES DO CLIENTE CLICANDO NA ENGRENAGEM SUPERIOR DO MENU,
+A SENHA MESTRE É: "mestre" (sem aspas).
+
+-----------------------------------------------------------------
+
+APÓS ISSO REALIZE ESSES PASSOS SEM PULAR NENHUMA ETAPA:
+
+ALTERE OS ARQUIVOS DA FORMA DESCRITA ABAIXO (TENHA EM MAOS O NOTEPAD++ PORTABLE 
+NO PENDRIVE, É DE SUMA IMPORTANCIA):
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-gera_nfe.php
+-assina nfe.php
+-valida nfe.php
+-envia nfe.php
+-add protocolo.php
+-danfe nfe.php
+
+TROCAR HOMOLOGACAO POR PRODUÇÃO
+-------------------------------------------------------------------------------
+
+-config.json
+-danfe nfe.php
+
+TROCAR O CAMINHO COMPLETO DOS REPOSITORIOS E DA LOGO, 
+ASSIM COMO AS INFORMAÇÕES DO CLIENTE
+-------------------------------------------------------------------------------
+
+-danfe nfe.php
+
+TROCAR O CAMINHO DO $xmlProt DA NFE POR:
+
+../nfephp/xmls/NF-e/producao/enviadas/aprovadas/".$data."/{$chave}-nfe.xml
+
+Sendo que data é:
+
+$data = date('Ym');
+-------------------------------------------------------------------------------
+
+sUBSTITUIR O CERTIFICADO NA PASTA CERTS
+-------------------------------------------------------------------------------
+
+-envia nfe.php
+-consulta recibo.php
+
+TROCAR o $tpAmb DE 2 PARA 1
+-------------------------------------------------------------------------------
+
+-gera_nfe.php
+
+NAS LINHAS:
+
+//$xNome = $cliente[0]['nome_razao_social_cliente'];
+$xNome = 'NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL';
+
+E NAS LINHAS:
+
+//$xProd = $prod['xProd'];
+$xProd = 'NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL';
+
+, APAGUE AS DUAS "SEGUNDAS LINHAS" E RETIRE AS BARRAS DUPLAS // DAS
+"PRIMEIRAS LINHAS"
+-------------------------------------------------------------------------------
+
+-menu_links.php
+
+CASO O SISTEMA SEJA SÓ PARA DANFE, APAGUE AS LINHAS:
+
+<li>
+	<a href="venda_lista_nfe.php">Gerenciar NFe</a>
+</li>
+
+SE  FOR O CASO DE CUPOM FISCAL, NÃO ALTERE NADA.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+AGORA TESTE A EMISSÃO DE UMA NOTA OU DE UM CUPOM COM A PERMISSAO DO CLIENTE,
+POIS O AMBIENTE JA ESTÁ EM MODO DE PRODUÇÃO.
+
+CASO SAIA UMA MENSAGEM DE NÃO VALOR FISCAL NA DANFE OU NO CUPOM, REVISE
+OS PASSOS ACIMA. CASO O ERRO PERSISTA, LIGUE PARA O MEU NUMERO: 991435011.
+
+---------------------------------------------------------------
+
+CASO A NOTA SAIA PERFEITA E AS INFORMAÇÕES ESTIVEREM CORRETAS, O SISTEMA
+FOI INSTALADO COM SUCESSO, RETANDO APENAS CRIAR UM ATALHO PARA O USUÁRIO.
+

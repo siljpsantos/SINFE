@@ -1,0 +1,3 @@
+CREATE TABLE `db_erp_nfce`.`tab_cce` ( `id_cce` INT NOT NULL AUTO_INCREMENT , `id_venda` INT NOT NULL , `chave_nfe_cce` VARCHAR(60) NOT NULL , `num_seq_cce` INT NOT NULL , PRIMARY KEY (`id_cce`)) ENGINE = InnoDB;
+
+ALTER TABLE `tab_cce` ADD `mes_ano_cce` VARCHAR(20) NOT NULL AFTER `num_seq_cce`;

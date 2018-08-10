@@ -1,0 +1,16 @@
+{
+    "require": {
+        "php": ">=5.6",
+        "ext-dom": "*",
+        "ext-curl": "*",
+        "ext-soap": "*",
+        "ext-openssl": "*",
+        "ext-mbstring": "*",
+        "psr/log": "^1.0",
+        "league/flysystem": "^1.0",
+        "symfony/yaml": "^3.3",
+		"nfephp-org/sped-common" : "^5.0",
+		"nfephp-org/sped-nfe" : "^5.0",
+		"nfephp-org/sped-da" : "^0.1"
+    }
+}

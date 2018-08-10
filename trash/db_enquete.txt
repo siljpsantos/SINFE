@@ -1,0 +1,9 @@
+CREATE database db_enquete
+
+CREATE TABLE jogador
+(
+id_jogador int(11) A.I. PRIMARY_KEY,
+nome_jogador varchar(200),
+posicao_jogador varchar(100),
+escola_jogador varchar(200)
+)
