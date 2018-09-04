@@ -1,4 +1,0 @@
-This XML is not valid. Element '{http://www.portalfiscal.inf.br/nfe}NCM': [facet 'pattern'] The value '' is not accepted by the pattern '[0-9]{2}|[0-9]{8}'.
-
-Element '{http://www.portalfiscal.inf.br/nfe}NCM': '' is not a valid value of the local atomic type.
-

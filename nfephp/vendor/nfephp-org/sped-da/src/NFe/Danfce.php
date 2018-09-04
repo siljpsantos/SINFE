@@ -501,6 +501,7 @@ class Danfce extends Common
         $hMaxLinha = $this->hMaxLinha;
         $cont = 0;
         $aFontProdutos = array('font'=>$this->fontePadrao, 'size'=>7, 'style'=>'');
+		$aFontProdutosc = array('font'=>$this->fontePadrao, 'size'=>7, 'style'=>'B');
         if ($qtdItens > 0) {
             foreach ($this->det as $detI) {
                 $thisItem   = $detI;
@@ -528,7 +529,7 @@ class Danfce extends Common
                     $wBoxDescricao,
                     $hMaxLinha,
                     $texto,
-                    $aFontProdutos,
+                    $aFontProdutosc,
                     'C',
                     'L',
                     0,
